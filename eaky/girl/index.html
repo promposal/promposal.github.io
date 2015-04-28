@@ -1,1 +1,27 @@
-test
+<!doctype html>
+<html>
+<head>
+<title>A short film</title>
+<style>
+body {
+        overflow: hidden;
+}
+</style>
+</head>
+<body>
+<iframe id="video"
+    src="//www.youtube.com/embed/MjH7_u-FYjE?autoplay=1&showinfo=0&controls=0&VQ=HD720"
+    frameborder="0" allowfullscreen></iframe>
+<script>
+$(function(){
+          $('#video').css({ width: $(window).innerWidth() + 'px', height:
+              $(window).innerHeight() + 'px' });
+
+            $(window).resize(function(){
+                    $('#video').css({ width: $(window).innerWidth() + 'px',
+                        height: $(window).innerHeight() + 'px' });
+                      });
+            });
+</script>
+</body>
+</html>
